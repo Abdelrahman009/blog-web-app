@@ -1,2 +1,22 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<% provide(:title , "Home") %>
+<section class="blue_shade" style="height: 600px;">
+  <div class="grey_shade">
+    <div class="grey">
+    </div>
+    <div class="container center-block text-center welcome_panel">
+      <div class="row">
+        <div class="col-lg-3 col-sm-0">
+        </div>
+        <div class="col-lg-6 col-sm-12">
+          <i class="fa fa-twitter fa-5x" style="color:#43BEF0;"></i>
+          <h1>Welcome to the home page</h1>
+          <p>you have the chance to sign up</p>
+          <%= link_to "Sign me up","/users/new", class: "btn btn-primary btn-lg",style: "margin-bottom: auto" %>
+        </div>
+        <div class="col-lg-3 col-sm-0">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

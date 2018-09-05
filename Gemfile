@@ -13,7 +13,7 @@ group :production do
   gem 'rails_12factor'
   gem 'pg'
 end
-
+gem 'bcrypt'
 group :test do
   gem 'guard'
   gem 'guard-minitest'
