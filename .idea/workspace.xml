@@ -2,30 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f93a3fd-7ca7-48e1-b052-94f1bb464a58" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/assets/images/bird.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/cover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/tweet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/twitter.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/users/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/twitter_replica.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/twitter_replica.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/static_pages/about.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/static_pages/about.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/static_pages/contacts.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/static_pages/contacts.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/static_pages/help.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/static_pages/help.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/static_pages/home.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/static_pages/home.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controllers/static_pages_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/static_pages_controller_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controllers/users_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/users_controller_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/user_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/user_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,23 +42,25 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Gemfile" value="5" />
-          <entry key="rb" value="123" />
+          <entry key="rb" value="124" />
+          <entry key="scss" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Ruby" value="128" />
+          <entry key="Ruby" value="129" />
+          <entry key="SCSS" value="17" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="59" column="10" selection-start-line="59" selection-start-column="10" selection-end-line="59" selection-end-column="10" />
+            <state relative-caret-position="163">
+              <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -113,7 +92,7 @@
         <entry file="file://$PROJECT_DIR$/test/test_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="242">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -145,7 +124,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/user.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="220">
@@ -168,6 +147,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>password_di</find>
+      <find>cover</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -187,6 +167,7 @@
         <option value="$PROJECT_DIR$/test/test_helper.rb" />
         <option value="$PROJECT_DIR$/test/models/user_test.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
       </list>
     </option>
   </component>
@@ -238,7 +219,20 @@
               <item name="twitter_replica" type="b2602c69:ProjectViewProjectNode" />
               <item name="twitter_replica" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="twitter_replica" type="b2602c69:ProjectViewProjectNode" />
+              <item name="twitter_replica" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="twitter_replica" type="b2602c69:ProjectViewProjectNode" />
+              <item name="twitter_replica" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="twitter_replica" type="b2602c69:ProjectViewProjectNode" />
@@ -391,12 +385,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1536148319546</updated>
-      <workItem from="1536148320889" duration="3054000" />
+      <workItem from="1536148320889" duration="4489000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3054000" />
+    <option name="totallyTimeSpent" value="4489000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="732" y="49" width="1150" height="1020" extended-state="0" />
@@ -478,13 +472,6 @@
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="59" column="10" selection-start-line="59" selection-start-column="10" selection-end-line="59" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Guardfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="542">
@@ -512,7 +499,7 @@
     <entry file="file://$PROJECT_DIR$/test/test_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
@@ -527,6 +514,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
         </state>
       </provider>
     </entry>
