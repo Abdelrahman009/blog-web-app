@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   before_save do
     self.first_name = first_name.downcase.capitalize
-    self.last_name = first_name.downcase.capitalize
+    self.last_name = last_name.downcase.capitalize
   end
   validates :email, presence: true ,format: { with: /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i},
             uniqueness: {case_sensitive: false}

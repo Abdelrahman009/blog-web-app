@@ -5,13 +5,7 @@ class UserTest < ActiveSupport::TestCase
   #   assert true
   # end
   def setup
-    @user = User.new(
-        first_name: "Abdelrahman",
-        last_name: "Ibrahim",
-        email: "foo@bar.com",
-        password: "123456",
-        password_confirmation: "123456"
-    )
+    @user = User.new(first_name:"Abdo",last_name: "ibrahim",email:"foo@bar.com", password:"123456", password_confirmation:"123456")
   end
 
   test "the fields are not blank" do

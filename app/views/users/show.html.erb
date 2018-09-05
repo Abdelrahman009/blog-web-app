@@ -1,0 +1,102 @@
+<%provide(:title,@user.last_name) %>
+<section class="standard_blue_block">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-sm-12 profile_viewer text-center">
+        <div class="profile_image_holder"><%= gravatar_for @user %></div>
+        <div class="profile_info_holder">
+          <div><%= @user.first_name %><span> </span><%= @user.last_name %></div>
+          <div><%= @user.email %></div>
+        </div>
+      </div>
+      <div class="col-lg-7 col-sm-12 profile_viewer text-center">
+            <h1>Status</h1>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-sm-12 profile_status_box">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <h3>Followers</h3>
+                    </div>
+                    <div class="col-lg-12 col-sm-0">
+                      <br/>
+                      <br/>
+                    </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12">
+
+                    <h2>number</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-12 profile_status_box">
+
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <h3>Following</h3>
+                    </div>
+                    <div class="col-lg-12 col-sm-0">
+                      <br/>
+                      <br/>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-12">
+
+                    <h2>number</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-12 profile_status_box">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <h3>Tweets</h3>
+                    </div>
+                    <div class="col-lg-12 col-sm-0">
+                      <br/>
+                      <br/>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12">
+
+                    <h2>number</h2>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+
+
+          </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-1 col-sm-0">
+
+        </div>
+        <div class="col-lg-10 text-center">
+          <%=image_tag "bird.png",width: '100px',height: '100px' %>
+          <span style="font-size: 300%"> Tweets</span>
+        </div>
+        <div class="col-lg-1 col-sm-0">
+        </div>
+
+     </div>
+
+  </div>
+
+</section>
+
