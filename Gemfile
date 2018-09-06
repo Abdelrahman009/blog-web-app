@@ -14,10 +14,12 @@ group :production do
   gem 'pg'
 end
 gem 'bcrypt'
+
 group :test do
   gem 'guard'
   gem 'guard-minitest'
   gem 'minitest-reporters'
+  gem 'rails-controller-testing'
 end
 
 
