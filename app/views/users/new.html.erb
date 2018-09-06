@@ -36,7 +36,7 @@
           </div>
         <%end%>
         <br>
-        <div class="hint-text">Already have an account? <a href="#">Login here</a></div>
+        <div class="hint-text">Already have an account? <%=link_to  "Login here" ,"/login" %></div>
         </div>
       <div class="col-lg-<%="5"if @user.errors.any?%><%="3"if !@user.errors.any?%> col-sm-12">
 
