@@ -8,13 +8,14 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
     else
       flash[:danger] = "You need to log in"
-      redirect_to action: "new"
+      redirect_to 'new'
     end
   end
 
   def create
     @user = User.new(user_params) # Not the final implementation!
     if @user.save
+      log_in @user
       flash[:success] = "You created a new account"
       redirect_to @user
     else
