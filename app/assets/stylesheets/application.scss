@@ -178,3 +178,21 @@ body{
   background-color:rgba(127, 235, 255, 0.51) ;
 
 }
+
+.user_card{
+  padding: 24px;
+  margin: 24px;
+  background-color: #e2f5f785;
+  border-radius: 10px;
+}
+
+
+.image-card-holder{
+  background-color: #91daf7;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: asset_url("tweettweet.png");
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+}

@@ -25,7 +25,7 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <%= link_to "Profile",get_current_user,class: "dropdown-item" %>
-                <%= link_to "Settings","#",class: "dropdown-item" %>
+                <%= link_to "Settings", get_current_user ? edit_user_path(get_current_user) : "/static_pages/home",class: "dropdown-item" %>
                 <div class="dropdown-divider"></div>
                 <%= link_to "Logout", logout_path,method:"delete",class: "dropdown-item" %>
               </div>
