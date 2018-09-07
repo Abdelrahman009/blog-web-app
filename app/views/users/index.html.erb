@@ -49,7 +49,7 @@
                   <br>
                   <%= user.email %>
                   <br>
-                  <% if get_current_user.admin && !current_user?(user) %>
+                  <% if get_current_user && get_current_user.admin && !current_user?(user) %>
                       <%= link_to "delete", user ,method: :delete,data: {confirm:"You sure?"}, class: "btn btn-danger" %>
                   <%end %>
                 </div>
