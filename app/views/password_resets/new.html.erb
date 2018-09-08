@@ -1,0 +1,26 @@
+<%provide(:title,"forgot password") %>
+<section class="image-holder">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-sm-12">
+      </div>
+
+      <div class="signup-form col-lg-6 col-sm-12 sign_box">
+        <h1 class="text-center center-block">Log in</h1>
+        <%= form_for(:password_reset , url: password_resets_url) do |f| %>
+          <div class="form-group">
+            <%= f.email_field :email,required: 'required',class: "form-control" ,placeholder: "E-mail"%>
+          </div>
+          <div>
+            <%= f.submit "Change", class: "btn btn-primary" %>
+          </div>
+        <%end %>
+        <br>
+        <div class="hint-text">Don't have an account? <%=link_to  "Sign up here" ,"/users" %></div>
+      </div>
+      <div class="col-lg-3 col-sm-12">
+
+      </div>
+    </div>
+  </div>
+</section>

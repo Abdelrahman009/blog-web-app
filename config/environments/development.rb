@@ -32,9 +32,25 @@ Rails.application.configure do
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.delivery_method = :test
-  host = 'http://localhost:3000/'
+  # config.action_mailer.delivery_method = :test
+   host = 'http://localhost:3000/'
   config.action_mailer.default_url_options = {host: host}
+  #
+  config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  #     :address              => "localhost",
+  #     :port                 => 25
+  # }
+  ActionMailer::Base.smtp_settings = {
+      :address        => 'smtp.gmail.com',
+      :domain         => 'mail.google.com',
+      :port           => 587,
+      :user_name      => 'twitter.replica.009@gmail.com',
+      :password       => '951475300',
+      :authentication => :plain,
+      :enable_starttls_auto => true
+  }
+
 
   config.action_mailer.perform_caching = false
 

@@ -22,6 +22,8 @@
               <span>Remember me</span>
 
             <%end %>
+            <div class="hint-text">Forgot password? <%=link_to  "Reset password" ,password_resets_new_url %></div>
+
           </div>
           <div>
             <%= f.submit "Login", class: "btn btn-primary" %>
