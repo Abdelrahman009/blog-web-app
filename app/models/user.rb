@@ -1,6 +1,8 @@
 class User < ApplicationRecord
 
-  attr_accessor :remember_token
+
+  before_create :create_activation_digest
+  attr_accessor :remember_token,:activation_token
   before_save do
     self.first_name = first_name.downcase.capitalize
     self.last_name = last_name.downcase.capitalize
@@ -18,9 +20,10 @@ class User < ApplicationRecord
     BCrypt::Password.create(string,cost: cost)
   end
 
-  def authenticated?(remember_token)
-    if remember_token
-      BCrypt::Password.new(remember_digest) == remember_token
+  def authenticated?(attribute,token)
+    digest = self.send("#{attribute}_digest")
+    if digest
+      BCrypt::Password.new(digest) == token
     else
       false
     end
@@ -34,8 +37,21 @@ class User < ApplicationRecord
     update_attribute(:remember_digest, nil)
   end
 
+  def activate
+    self.update_attribute(:activated, true)
+    self.update_attribute(:activated_at, Time.zone.now)
+  end
+
   def remember
     self.remember_token = User.new_token
     update_attribute(:remember_digest,User.digest(remember_token))
   end
+
+  private
+
+  def create_activation_digest
+    self.activation_token = User.new_token
+    self.activation_digest = User.digest(activation_token)
+  end
+
 end

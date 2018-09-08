@@ -7,7 +7,6 @@ class UsersController < ApplicationController
     @users = User.paginate(page: params[:page])
   end
 
-  
   def new
     @user = User.new
   end
@@ -22,11 +21,13 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params) # Not the final implementation!
+    @user = User.new(user_params)
     if @user.save
-      log_in @user
-      flash[:success] = "You created a new account"
-      redirect_to @user
+      UserMailer.account_activation(@user).deliver_now
+
+      flash[:info] = "Check your email to activate your account"
+
+      redirect_to root_url
     else
       render 'new'
     end
@@ -69,14 +70,14 @@ class UsersController < ApplicationController
   def correct_user
     user = User.find(params[:id])
     unless current_user? user
-        flash[:danger] = "you have been redirected";
-        redirect_to root_url
+      flash[:danger] = "you have been redirected"
+      redirect_to root_url
     end
   end
 
   def admin_user
-    if !get_current_user.admin
-      flash[:danger] = "Not autherized";
+    unless get_current_user.admin
+      flash[:danger] = "Not autherized"
       redirect_to root_url
     end
   end

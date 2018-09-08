@@ -1,0 +1,8 @@
+
+Hi <%= @user.first_name %> <%= @user.last_name %>,
+
+Welcome to the Twitter Replica app!
+Click on the button below to activate your account:
+<%= link_to "Activation",
+            edit_account_activation_url(@user.activation_token,email: @user.email),
+    class: "btn btn-primary" %>
