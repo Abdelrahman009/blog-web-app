@@ -1,0 +1,36 @@
+
+<li id = "micropost-<%=micropost.id %>">
+  <div class="post">
+    <div class= "container">
+      <div class="row">
+
+        <div class="col-lg-4 col-md-12">
+          <%= gravatar_for (micropost.user)%>
+          <br>
+          <%= micropost.user.first_name %><span> </span><%= micropost.user.last_name %>
+        </div>
+
+        <div class="col-lg-8 col-md-12">
+          <span>
+            Posted at <%= time_ago_in_words micropost.created_at %> ago
+          </span>
+          <hr>
+          <span>
+            <%= micropost.content %>
+          </span>
+          <br>
+          <%= image_tag(micropost.picture.url) if micropost.picture? %>
+        </div>
+
+
+      </div>
+      <br>
+      <% if current_user?(micropost.user) %>
+        <%= link_to "Delete",micropost,method: :delete,
+                    data:{
+                        confirm: "are you sure?"
+                    }, class:"btn btn-danger" %>
+      <% end %>
+    </div>
+  </div>
+</li>

@@ -23,7 +23,7 @@ class PasswordResetsController < ApplicationController
   end
 
   def update
-    if @user.reset_password_expired?
+    if @user.password_reset_expired?
       flash.now[:danger] = "Your password reset expired"
       render new_password_reset_url
     elsif @user.update_attributes(user_params)

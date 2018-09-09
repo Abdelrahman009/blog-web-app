@@ -86,7 +86,7 @@
   </div>
 
 </section>
-<section >
+<section class="home_back" >
   <div class="container tweet_holder">
     <div class="row">
       <div class="col-lg-1 col-sm-0">
@@ -95,6 +95,17 @@
       <div class="col-lg-10 text-center">
         <%=image_tag "bird.png",width: '100px',height: '100px' %>
         <span style="font-size: 300%"> Tweets</span>
+        <div>
+          <% if @microposts.any? %>
+            <ul style="list-style: none">
+              <%= render @microposts %>
+            </ul>
+            <%= will_paginate @microposts, per_page: 20%>
+          <%end %>
+
+        </div>
+
+
       </div>
       <div class="col-lg-1 col-sm-0">
       </div>

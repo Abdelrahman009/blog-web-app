@@ -196,3 +196,32 @@ body{
   width: 100%;
   height: 100%;
 }
+
+
+.post{
+  padding: 24px !important;
+  background-color: #3cc3f775;
+  border-radius: 10px;
+  color: #000;
+  margin: 12px;
+}
+
+
+.profile_home{
+  padding: 24px !important;
+  background-color: #f5f5f5ad;
+  border-radius: 10px;
+  color: #FFF;
+  margin: 12px;
+
+}
+
+
+.home_back{
+  background-color: #91daf7;
+  background-position: center center;
+  background-image: asset_url("bg2.png");
+  padding: 24px;
+  width: 100%;
+  height: 100%;
+}

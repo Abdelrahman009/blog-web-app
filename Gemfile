@@ -13,10 +13,13 @@ group :production do
   gem 'rails_12factor'
   gem 'pg'
 end
+gem 'carrierwave'
+gem 'mini_magick'
 gem 'faker'
 gem 'will_paginate'
 gem 'bcrypt'
 gem 'bootstrap-will_paginate'
+
 group :test do
   gem 'guard'
   gem 'guard-minitest'

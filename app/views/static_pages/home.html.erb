@@ -1,4 +1,53 @@
 <% provide(:title , "Home") %>
+
+<%if logged_in? %>
+  <section class="home_back">
+  <div class="container">
+    <div class="row">
+      <aside class="col-lg-4 col-sm-12  text-center">
+        <div class="profile_home">
+          <div class="profile_image_holder"><%= gravatar_for get_current_user %></div>
+          <div class="profile_info_holder">
+            <div><%= get_current_user.first_name %><span> </span><%= get_current_user.last_name %></div>
+            <div><%= get_current_user.email %></div>
+          </div>
+        </div>
+      </aside>
+      <div class="col-lg-8 col-sm-12 text-center">
+        <div class="profile_home">
+          <%= form_for @micropost , html: {multipart: true} do |f| %>
+            <div class="form-group">
+              <%= f.text_area :content  ,required: 'required' ,class: "form-control",placeholder: "tweet" %>
+            </div>
+            <div class="form-group">
+              <%= f.file_field :picture %>
+            </div>
+
+            <%= f.submit "Tweet", class: "form-control btn btn-primary" %>
+          <% end  %>
+        </div>
+        <div class="profile_home" style="color: #2E2F30">
+          <h1>
+            New Feeds
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div>
+      <%= will_paginate @feed %>
+      <% if @feed.any? %>
+        <ul style="list-style: none">
+          <% @feed.each do |f|%>
+            <%= render 'microposts/micropost' ,micropost: f %>
+          <%end%>
+        </ul>
+        <%= will_paginate @feed, per_page: 20%>
+      <%end %>
+    </div>
+  </div>
+  </section>
+<%else%>
+
 <section class="blue_shade" style="height: 600px;">
   <div class="grey_shade">
     <div class="grey">
@@ -20,3 +69,4 @@
   </div>
 
 </section>
+<%end %>
