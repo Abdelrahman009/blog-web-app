@@ -8,17 +8,27 @@
         <div class="profile_info_holder">
           <div><%= @user.first_name %><span> </span><%= @user.last_name %></div>
           <div><%= @user.email %></div>
+          <div id="follow_p">
+          <% if @user.id != get_current_user.id %>
+            <%if !get_current_user.following?(@user) %>
+              <%= render "users/follow" %>
+            <% else %>
+              <%= render "unfollow" %>
+            <%end %>
+          <% end %>
+        </div>
         </div>
       </div>
       <div class="col-lg-7 col-sm-12 profile_viewer text-center">
-            <h1>Status</h1>
+            <h1>Stats</h1>
           <div class="container">
             <div class="row">
               <div class="col-lg-4 col-sm-12 profile_status_box">
                 <div class="container">
                   <div class="row">
                     <div class="col-lg-12">
-                      <h3>Followers</h3>
+                      <h3><%= link_to "Followers" ,
+                                      followers_user_url(@user)%></h3>
                     </div>
                     <div class="col-lg-12 col-sm-0">
                       <br/>
@@ -29,7 +39,7 @@
                   <div class="row">
                     <div class="col-lg-12">
 
-                    <h2>number</h2>
+                    <h2 id="followers_c"><%= @user.followers.count %></h2>
                     </div>
                   </div>
                 </div>
@@ -39,7 +49,8 @@
                 <div class="container">
                   <div class="row">
                     <div class="col-lg-12">
-                      <h3>Following</h3>
+                      <h3><%= link_to "Following" ,
+                      following_user_url(@user)%></h3>
                     </div>
                     <div class="col-lg-12 col-sm-0">
                       <br/>
@@ -50,7 +61,7 @@
                   <div class="row">
                     <div class="col-lg-12">
 
-                    <h2>number</h2>
+                    <h2 id="following_c"><%=@user.following.count %></h2>
                     </div>
                   </div>
                 </div>
@@ -69,7 +80,7 @@
                   <div class="row">
                     <div class="col-lg-12">
 
-                    <h2>number</h2>
+                    <h2><%= @user.microposts.count %></h2>
                     </div>
 
                   </div>
